@@ -1,16 +1,10 @@
-import Destaques from "./components/Destaques";
-import Footer from "./components/Footer";
-import Header from "./components/Header"
-import PageInitial from "./components/PageInitial";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <>
-      <Header />
-      <PageInitial />
-      <Destaques />
-      <Footer />
-    </>
+    <div className="bg-black">
+      <Home />
+    </div>
   );
 }
 
