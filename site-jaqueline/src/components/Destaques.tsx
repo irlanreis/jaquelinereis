@@ -1,6 +1,7 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import jaque01 from '../assets/images/Jaque-01.svg'
 
 function Destaques() {
   const settings = {
@@ -32,21 +33,21 @@ function Destaques() {
 
   return (
     <div>
-      <h2 className="text-white p-2">Destaques</h2>
-      <Slider className="bg-black" {...settings}>
+      <h2 className="text-white p-2 text-6xl font-extralight bg-black pb-10">Destaques</h2>
+      <Slider className="400 space-x-16 bg-black pb-8" {...settings}>
         <div>
-          <p className="w-64 h-80 border-2 bg-amber-500">A</p>
+          <img className="w-64 h-80 border-2 bg-amber-500" src={jaque01} alt="img-1" />
         </div>
         <div>
-          <p className="w-64 h-80 border-2 bg-amber-500">B</p>
+          <img className="w-64 h-80 border-2 bg-amber-500" src={jaque01} alt="img-2" />
         </div>
         <div>
-          <p className="w-64 h-80 border-2 bg-amber-500">C</p>
+          <img className="w-64 h-80 border-2 bg-amber-500" src={jaque01} alt="img-3" />
         </div>
         <div>
-          <p className="w-64 h-80 border-2 bg-amber-500">D</p>
+          <img className="w-64 h-80 border-2 bg-amber-500" src={jaque01} alt="img-4" />
         </div>
-        
+
       </Slider>
     </div>
   )
