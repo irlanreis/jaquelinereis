@@ -5,9 +5,9 @@ function PageInitial() {
     <main className="bg-black w-full h-screen p-4">
 
       <div className="flex flex-col w- h-full absolute justify-stretch">
-        <p className="text-amber-400 text-4xl font-extralight pt-8">Olá, sou Jaqueline Reis,</p>
+        <p className="text-amber-500 text-4xl font-extralight pt-8">Olá, sou Jaqueline Reis,</p>
         <p className="text-white font-extralight ml-1">social media e criadora de conteúdosa mais de 3 anos.</p>
-        <p className="text-white w-96 pl-1 font-light mt-32">Meu <strong className="text-amber-500">propósito</strong> é fazer você e sua empresa terem um posicionamento brilhante no digital através de uma criação de conteúdo <strong className="text-amber-500">Estrégica & Intencional</strong>.</p>
+        <p className="text-white w-96 pl-1 font-light mt-32">Meu propósito é fazer você e sua empresa terem um <strong className="text-amber-500 font-bold">posicionamento brilhante no digital</strong> através de uma criação de conteúdo Estrégica & Intencional.</p>
       </div>
       <div className="flex relative justify-end mr-36">
         <div className='flex w-96 relative'>
