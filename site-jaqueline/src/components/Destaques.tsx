@@ -8,6 +8,14 @@ import work04 from '../assets/images/4-work.svg'
 import work05 from '../assets/images/5-work.svg'
 
 function Destaques() {
+  const images = [
+    work01,
+    work02,
+    work03,
+    work04,
+    work05
+  ]
+
   const settings = {
     dots: true,
     infinite: true,
@@ -30,6 +38,7 @@ function Destaques() {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
+          centerMode: true,
         },
       },
       {
@@ -54,23 +63,17 @@ function Destaques() {
   return (
     <div>
       <h2 className="text-white p-2 text-6xl font-extralight bg-black pb-10">Destaques</h2>
-      <Slider className="400 space-x-16 bg-black pb-8" {...settings}>
-        <div>
-          <img className="w-64 h-80 border-2 bg-amber-500" src={work01} alt="img-1" />
-        </div>
-        <div>
-          <img className="w-64 h-80 border-2 bg-amber-500" src={work02} alt="img-2" />
-        </div>
-        <div>
-          <img className="w-64 h-80 border-2 bg-amber-500" src={work03} alt="img-3" />
-        </div>
-        <div>
-          <img className="w-64 h-80 border-2 bg-amber-500" src={work04} alt="img-4" />
-        </div>
-        <div>
-          <img className="w-64 h-80 border-2 bg-amber-500" src={work05} alt="img-4" />
-        </div>
-
+      <Slider className="bg-black pb-8 " {...settings}>
+        {images.map((img, i) => (
+          <div className="flex flex-row sm:w-80 sm:h-96 relative 2xl:w-72 2xl:h-96">
+            <img
+              key={i}
+              className="sm:w-80 2xl:h-96 2xl:w-96 absolute"
+              src={img}
+              alt={`design ${i + 1}`}
+            />
+          </div>
+        ))}
       </Slider>
     </div>
   )
