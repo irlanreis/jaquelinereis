@@ -20,7 +20,7 @@ function Destaques() {
     dots: true,
     infinite: true,
     speed: 2000,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -29,7 +29,7 @@ function Destaques() {
       {
         breakpoint: 1920,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 5,
           slidesToScroll: 1,
         }
       },
@@ -61,18 +61,16 @@ function Destaques() {
   }
 
   return (
-    <div>
-      <h2 className="text-white p-2 text-6xl font-extralight bg-black pb-10">Destaques</h2>
-      <Slider className="bg-black pb-8 " {...settings}>
+    <div className="w-full bg-black flex relative justify-center">
+      <h2 className="text-white p-2 text-6xl font-extralight bg-black pb-10 absolute">Destaques</h2>
+      <Slider className="bg-black pb-8 2xl:w-full 2xl:mt-44 ml-2" {...settings}>
         {images.map((img, i) => (
-          <div className="flex flex-row sm:w-80 sm:h-96 relative 2xl:w-72 2xl:h-96">
             <img
               key={i}
-              className="sm:w-80 2xl:h-96 2xl:w-96 absolute"
+              className="sm:w-80 2xl:m-8 2xl:mb-0 2xl:w-40 pl-4"
               src={img}
               alt={`design ${i + 1}`}
             />
-          </div>
         ))}
       </Slider>
     </div>
