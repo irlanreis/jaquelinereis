@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: "Rasa";
+  src: url("./assets/fonts/Rasa-LightItalic.ttf") format("ttf");
+}
 
 body, html {
   margin: 0;

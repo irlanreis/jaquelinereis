@@ -8,11 +8,19 @@ import work04 from '../assets/images/4-work.svg'
 import work05 from '../assets/images/5-work.svg'
 
 function Destaques() {
+  const images = [
+    work01,
+    work02,
+    work03,
+    work04,
+    work05
+  ]
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 2000,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -21,7 +29,7 @@ function Destaques() {
       {
         breakpoint: 1920,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 5,
           slidesToScroll: 1,
         }
       },
@@ -30,6 +38,7 @@ function Destaques() {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
+          centerMode: true,
         },
       },
       {
@@ -52,25 +61,17 @@ function Destaques() {
   }
 
   return (
-    <div>
-      <h2 className="text-white p-2 text-6xl font-extralight bg-black pb-10">Destaques</h2>
-      <Slider className="400 space-x-16 bg-black pb-8" {...settings}>
-        <div>
-          <img className="w-64 h-80 border-2 bg-amber-500" src={work01} alt="img-1" />
-        </div>
-        <div>
-          <img className="w-64 h-80 border-2 bg-amber-500" src={work02} alt="img-2" />
-        </div>
-        <div>
-          <img className="w-64 h-80 border-2 bg-amber-500" src={work03} alt="img-3" />
-        </div>
-        <div>
-          <img className="w-64 h-80 border-2 bg-amber-500" src={work04} alt="img-4" />
-        </div>
-        <div>
-          <img className="w-64 h-80 border-2 bg-amber-500" src={work05} alt="img-4" />
-        </div>
-
+    <div className="w-full bg-black flex relative justify-center">
+      <h2 className="text-white p-2 text-6xl font-extralight bg-black pb-10 absolute">Destaques</h2>
+      <Slider className="bg-black pb-8 2xl:w-full 2xl:mt-44 ml-2" {...settings}>
+        {images.map((img, i) => (
+            <img
+              key={i}
+              className="sm:w-80 2xl:m-8 2xl:mb-0 2xl:w-40 pl-4"
+              src={img}
+              alt={`design ${i + 1}`}
+            />
+        ))}
       </Slider>
     </div>
   )
