@@ -1,21 +1,10 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import work01 from '../assets/images/1-work.svg'
-import work02 from '../assets/images/2-work.svg'
-import work03 from '../assets/images/3-work.svg'
-import work04 from '../assets/images/4-work.svg'
-import work05 from '../assets/images/5-work.svg'
+import SectionGrid from './SectionGrid';
+import images from '../constants/globalImgs';
 
 function Destaques() {
-  const images = [
-    work01,
-    work02,
-    work03,
-    work04,
-    work05
-  ]
-
   const settings = {
     dots: true,
     infinite: true,
@@ -131,14 +120,16 @@ function Destaques() {
       </div>
       <div className="flex p-6 max-w-7xl ml-auto mr-auto mt-6 text-amber-500 justify-between 2xl:w-82 bg-black">
         <div className="text-center bg-black">
-        <p className="2xl:text-6xl w-82">+55</p>
-        <h1 className="w-82 font-light 2xl:text-4xl">Clientes em todo o Brasil</h1>
+          <p className="2xl:text-6xl w-82">+55</p>
+          <h1 className="w-82 font-light 2xl:text-4xl">Clientes em todo o Brasil</h1>
         </div>
         <div className="text-center bg-black">
-        <p className="2xl:text-6xl">+25</p>
-        <h1 className="w-82 font-light 2xl:text-4xl">Nichos atendidos</h1>
+          <p className="2xl:text-6xl">+25</p>
+          <h1 className="w-82 font-light 2xl:text-4xl">Nichos atendidos</h1>
         </div>
       </div>
+
+      <SectionGrid />
     </div>
   )
 }
