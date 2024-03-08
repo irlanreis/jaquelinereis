@@ -21,7 +21,7 @@ function SectionGrid() {
   ]
 
   return (
-    <div className="flex items-center justify-around">
+    <div className="flex items-center justify-around pb-20">
       <div className="grid grid-cols-4 gap-3 w-1/2 h-1/2 mt-16 ml-14">
         {
           images.map((image, index) => (
