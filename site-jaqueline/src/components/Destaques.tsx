@@ -3,6 +3,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import SectionGrid from './SectionGrid';
 import images from '../constants/globalImgs';
+import Feedbacks from './Feedbacks';
 
 function Destaques() {
   const settings = {
@@ -118,18 +119,19 @@ function Destaques() {
           <span className="p-2 bg-amber-950 rounded text-amber-500 hover:cursor-pointer hover:bg-amber-800">Valores ao Final</span>
         </div>
       </div>
-      <div className="flex p-6 max-w-7xl ml-auto mr-auto mt-6 text-amber-500 justify-between 2xl:w-82 bg-black">
-        <div className="text-center bg-black">
+      <div className="flex p-6 max-w-7xl ml-auto mr-auto mt-12 justify-center text-amber-500 space-x-20 2xl:w-82">
+        <div className="text-center">
           <p className="2xl:text-6xl w-82">+55</p>
           <h1 className="w-82 font-light 2xl:text-4xl">Clientes em todo o Brasil</h1>
         </div>
-        <div className="text-center bg-black">
+        <div className="text-center">
           <p className="2xl:text-6xl">+25</p>
           <h1 className="w-82 font-light 2xl:text-4xl">Nichos atendidos</h1>
         </div>
       </div>
 
       <SectionGrid />
+      <Feedbacks />
     </div>
   )
 }

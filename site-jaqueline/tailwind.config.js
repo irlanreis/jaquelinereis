@@ -18,6 +18,9 @@ export default {
       },
       fontFamily: {
         rasa: ['rasa']
+      },
+      backgroundImage: {
+        'offWhite': "url('/src/assets/images/background.svg')",
       }
     },
   },
